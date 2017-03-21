@@ -1,5 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Feed from './components/feed';
+
+ReactDOM.render(
+  <Feed />,
+  document.getElementById('fb-feed')
+);
+/*import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Feed extends React.Component {
   render() {
@@ -58,7 +66,6 @@ class Feed extends React.Component {
           </div>
         </div>
       </div>
-      //Status update #1
       <div className="fb-status-update panel panel-default">
         <div className="panel-body">
           <div className="row">
@@ -154,3 +161,4 @@ ReactDOM.render(
   <Feed />,
   document.getElementById('fb-feed')
 );
+*/
