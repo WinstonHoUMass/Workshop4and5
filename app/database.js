@@ -91,10 +91,10 @@ var initialData = {
     }
 };
 
-var data = JSON.parse(localStorage.getItem('facebook_data'));
-if (data === null) {
-    data = JSONClone(initialData);
-}
+// var data = JSON.parse(localStorage.getItem('facebook_data'));
+// if (data === null) {
+var data = JSONClone(initialData);
+// }
 
 /**
  * A dumb cloning routing. Serializes a JSON object as a string, then

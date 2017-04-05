@@ -1,5 +1,5 @@
 import {readDocument, writeDocument, addDocument} from './database.js';
-import { getFeedData, createComment } from './server';
+//import { getFeedData, createComment } from './server';
 
 /**
  * Emulates how a REST call is *asynchronous* -- it calls your function back
