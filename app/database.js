@@ -52,18 +52,22 @@ var initialData = {
                 "contents": "ugh."
             },
             // List of comments on the post
-            "comments": [{
+            "comments": [
+                {
                     // The author of the comment.
                     "author": 2,
                     // The contents of the comment.
                     "contents": "hope everything is ok!",
+                    //start with noone liking
+                    "likeCounter": [],
                     // The date the comment was posted.
                     // 01/24/16 22:00 EST
                     "postDate": 1453690800000
-                },
-                {
+                }, {
                     "author": 3,
                     "contents": "sending hugs your way",
+                    //start with noone liking
+                    "likeCounter": [],
                     "postDate": 1453690800000
                 }
             ]
@@ -153,21 +157,16 @@ export function resetDatabase() {
  */
 class ResetDatabase extends React.Component {
     render() {
-        return ( <
-            button className = "btn btn-default"
-            type = "button"
-            onClick = {
-                () => {
-                    resetDatabase();
-                    window.alert("Database reset! Refreshing the page now...");
-                    document.location.reload(false);
-                }
-            } > Reset Mock DB < /button>
+        return (< button className = "btn btn-default" type = "button" onClick = {
+            () => {
+                resetDatabase();
+                window.alert("Database reset! Refreshing the page now...");
+                document.location.reload(false);
+            }
+        } > Reset Mock DB < /button>
         );
     }
 }
 
 ReactDOM.render( <
-    ResetDatabase / > ,
-    document.getElementById('fb-db-reset')
-);
+    ResetDatabase / >, document.getElementById('fb-db-reset'));

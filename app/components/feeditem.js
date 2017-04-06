@@ -131,7 +131,7 @@ export default class FeedItem extends React.Component {
                     <CommentThread onPost={(commentText) => this.handleCommentPost(commentText)}>
                         {data.comments.map((comment, i) => {
                             return (
-                                <Comment key={i} author={comment.author} postDate={comment.postDate}>{comment.contents}</Comment>
+                                <Comment feedItem={this.state._id} index={i} key={i} data={comment} author={comment.author} postDate={comment.postDate}>{comment.contents}</Comment>
                             );
                         })
                     }
